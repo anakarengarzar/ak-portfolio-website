@@ -5,30 +5,34 @@
   <meta name="description" content="This is Ana Karen Garza's Web Dev Portfolio WIP">
   <title>AK's Portfolio | Contact</title>
   <link rel="shortcut icon" href="img/favicon-ak.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/apt0gwc.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
   <header>
     <a href="index.html"><img src="img/logo-ak.png" alt="Ana Karen Garza's Logo"></a>
     <nav>
-      <ul role="menubar">
+      <ul role="menubar" class="navigaton-list">
         <li role="presentation">
-          <a href="index.html" role="menuitem">Home</a>
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
         </li>
         <li role="presentation">
-          <a href="about.html" role="menuitem">About me</a>
+          <a href="about.html" role="menuitem" aria-label="About Ana Karen Garza" class="navigation-list__item">About</a>
         </li>
         <li role="presentation">
-          <a href="work.html" role="menuitem">Work</a>
+          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
         </li>
         <li role="presentation">
-          <a href="contact.html" role="menuitem">Contact</a>
+          <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
         </li>
       </ul>
     </nav>
   </header>
   <main>
     <h1>Contact</h1>
-    <form action="" method="post" id="contact-form">
+    <form method="post" id="contact-form">
       <label class="standard-label" for="contact-email">E-mail: </label>
       <input type="email" id="contact-email" required><br>
       <label class="standard-label" for="contact-telephone">Telephone: </label>
@@ -40,9 +44,14 @@
     <p>
       Ana Karen Garza<br>
       Monterrey, Mexico<br>
-      Telephone: <a href="tel:+528181818181">+528181818181</a><br>
+      <!-- DOUBT- The solution I found was to use the aria-label so that the screen
+      reader can readout the number like so the problem is that now the reader
+      would say two times telephone. If I remove the word telephone from the aria-label tota11y
+      keeps marking an error. I also tried hiding the first telephone word with a span and aria-hidden,
+      but did not work. What can I do in this situation? -->
+      Telephone: <a href="tel:+528181818181" aria-label="Telephone + 5 2. 8 1. 8 1 8 1. 8 1 8 1.">+528181818181</a><br>
       Email: <a href="mailto:anakarengarzar@gmail.com">anakarengarzar@gmail.com</a><br>
-      <a href="mailto:anakarengarzar@gmail.com">Contact me</a>
+      <a href="https://www.google.com">Contact me</a>
     </p>
   </main>
   <footer>
