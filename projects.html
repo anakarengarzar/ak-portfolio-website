@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="This is Ana Karen Garza's Web Dev Portfolio WIP">
-  <title>AK's Portfolio | Contact</title>
+  <title>AK's Portfolio | Projects</title>
   <link rel="shortcut icon" href="img/favicon-ak.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -24,32 +24,38 @@
             <a href="about.html" role="menuitem" aria-label="About Ana Karen Garza" class="navigation-list__item">about</a>
           </li>
           <li role="presentation" class="navigation-list__li">
-            <a href="projects.html" role="menuitem" class="navigation-list__item">projects</a>
+            <a href="projects.html" role="menuitem" class="navigation-list__item navigation-list__item--active">projects</a>
           </li>
           <li role="presentation" class="navigation-list__li">
-            <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">contact</a>
+            <a href="contact.html" role="menuitem" class="navigation-list__item">contact</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="content-contact">
-      <h1 class="contact-title">contact</h1>
-      <form method="post" id="contact-form">
-        <label class="standard-label" for="contact-email">e-mail: </label>
-        <input type="email" id="contact-email" required><br>
-        <label class="standard-label" for="contact-telephone">telephone: </label>
-        <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required><br>
-        <label class="standard-label" for="contact-message">message: </label>
-        <textarea id="contact-message" maxlength="240" required></textarea><br>
-        <input type="submit" value="send">
-      </form>
-      <p class="contact-info">
-        ana karen garza<br>
-        monterrey, mexico<br>
-        telephone: <a href="tel:+528181818181" aria-label="Telephone number">+528181818181</a><br>
-        email: <a href="mailto:anakarengarzar@gmail.com">anakarengarzar@gmail.com</a><br>
-        <a href="https://www.google.com">contact me</a>
-      </p>
+    <main class="content-projects">
+      <h1 class="projects-title">projects</h1>
+      <div class="project-grid">
+        <div class="project-grid__item project-1">
+          <h2>project 1</h2>
+          <p>This is the description of the project.</p>
+          <a href="https://www.google.com">Check it out!</a>
+        </div>
+        <div class="project-grid__item project-2">
+          <h2>project 2</h2>
+          <p>This is the description of the project.</p>
+          <a href="https://www.google.com">Check it out!</a>
+        </div>
+        <div class="project-grid__item project-3">
+          <h2>project 3</h2>
+          <p>This is the description of the project.</p>
+          <a href="https://www.google.com">Check it out!</a>
+        </div>
+        <div class="project-grid__item project-4">
+          <h2>project 4</h2>
+          <p>This is the description of the project.</p>
+          <a href="https://www.google.com">Check it out!</a>
+        </div>
+      </div>
     </main>
   </div>
   <footer class="page-footer">
