@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="This is Ana Karen Garza's Web Dev Portfolio WIP">
   <title>AK's Portfolio | Contact</title>
   <link rel="shortcut icon" href="img/favicon-ak.ico">
@@ -11,60 +12,59 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <a href="index.html"><img src="img/logo-ak.png" alt="Ana Karen Garza's Logo"></a>
-    <nav>
-      <ul role="menubar" class="navigaton-list">
-        <li role="presentation">
-          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-        </li>
-        <li role="presentation">
-          <a href="about.html" role="menuitem" aria-label="About Ana Karen Garza" class="navigation-list__item">About</a>
-        </li>
-        <li role="presentation">
-          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-        </li>
-        <li role="presentation">
-          <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h1>Contact</h1>
-    <form method="post" id="contact-form">
-      <label class="standard-label" for="contact-email">E-mail: </label>
-      <input type="email" id="contact-email" required><br>
-      <label class="standard-label" for="contact-telephone">Telephone: </label>
-      <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required><br>
-      <label class="standard-label" for="contact-message">Message: </label>
-      <textarea id="contact-message" maxlength="240" required></textarea><br>
-      <input type="submit" value="Send">
-    </form>
-    <p>
-      Ana Karen Garza<br>
-      Monterrey, Mexico<br>
-      <!-- DOUBT- The solution I found was to use the aria-label so that the screen
-      reader can readout the number like so the problem is that now the reader
-      would say two times telephone. If I remove the word telephone from the aria-label tota11y
-      keeps marking an error. I also tried hiding the first telephone word with a span and aria-hidden,
-      but did not work. What can I do in this situation? -->
-      Telephone: <a href="tel:+528181818181" aria-label="Telephone + 5 2. 8 1. 8 1 8 1. 8 1 8 1.">+528181818181</a><br>
-      Email: <a href="mailto:anakarengarzar@gmail.com">anakarengarzar@gmail.com</a><br>
-      <a href="https://www.google.com">Contact me</a>
-    </p>
-  </main>
-  <footer>
-    <p>Find me on</p>
-    <a href="https://github.com/anakarengarzar" target="_blank">
-      <img src="img/icon-github.svg" width="30" height="30" alt="Github logo">
-    </a>
-    <a href="https://www.linkedin.com/in/anakarengr/" target="_blank">
-      <img src="img/icon-linkedin.svg" width="30" height="30" alt="Linkedin logo">
-    </a>
-    <a href="https://instagram.com/anakarengr" target="_blank">
-      <img src="img/icon-instagram.svg" width="30" height="30" alt="Instagram logo">
-    </a>
+  <div class="all-but-footer">
+    <header class="page-header">
+      <a href="index.html" ><img src="img/logo-ak.svg" alt="Ana Karen Garza's logo" id="header-logo" class="page-header__item"></a>
+      <nav class="main-navigation page-header__item">
+        <ul role="menubar" class="navigaton-list">
+          <li role="presentation" class="navigation-list__li">
+            <a href="index.html" role="menuitem" class="navigation-list__item">home</a>
+          </li>
+          <li role="presentation" class="navigation-list__li">
+            <a href="about.html" role="menuitem" aria-label="About Ana Karen Garza" class="navigation-list__item">about</a>
+          </li>
+          <li role="presentation" class="navigation-list__li">
+            <a href="projects.html" role="menuitem" class="navigation-list__item">projects</a>
+          </li>
+          <li role="presentation" class="navigation-list__li">
+            <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content-contact">
+      <h1 class="contact-title">contact</h1>
+      <form method="post" id="contact-form">
+        <label class="standard-label" for="contact-email">e-mail: </label>
+        <input type="email" id="contact-email" required><br>
+        <label class="standard-label" for="contact-telephone">telephone: </label>
+        <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required><br>
+        <label class="standard-label" for="contact-message">message: </label>
+        <textarea id="contact-message" maxlength="240" required></textarea><br>
+        <input type="submit" value="send">
+      </form>
+      <p class="contact-info">
+        ana karen garza<br>
+        monterrey, mexico<br>
+        telephone: <a href="tel:+528181818181" aria-label="Telephone number">+528181818181</a><br>
+        email: <a href="mailto:anakarengarzar@gmail.com">anakarengarzar@gmail.com</a><br>
+        <a href="https://www.google.com">contact me</a>
+      </p>
+    </main>
+  </div>
+  <footer class="page-footer">
+    <p>find me on</p>
+    <div class="social-media">
+      <a href="https://github.com/anakarengarzar" target="_blank">
+        <img src="img/icon-github.svg" width="30" height="30" alt="Github logo">
+      </a>
+      <a href="https://www.linkedin.com/in/anakarengr/" target="_blank">
+        <img src="img/icon-linkedin.svg" width="30" height="30" alt="Linkedin logo">
+      </a>
+      <a href="https://instagram.com/anakarengr" target="_blank">
+        <img src="img/icon-instagram.svg" width="30" height="30" alt="Instagram logo">
+      </a>
+    </div>
   </footer>
   <script src="js/tota11y.min.js"></script>
 </body>
