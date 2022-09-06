@@ -13,9 +13,29 @@ FONTS
 
 /*-VARIABLES-*/
 :root {
-  /*--COLORS--*/
+  /*--COLORS--*/ /* second option: #da6d4b */ /* second option: #b18500 */
 
   /*--FONT STYLING--*/
+}
+
+::-webkit-input-placeholder{
+  opacity: 50%;
+}
+
+::-moz-placeholder{
+  opacity: 50%;
+}
+
+:-ms-input-placeholder{
+  opacity: 50%;
+}
+
+::-ms-input-placeholder{
+  opacity: 50%;
+}
+
+::placeholder{
+  opacity: 50%;
 }
 
 * {
@@ -133,6 +153,10 @@ input[type=submit] {
 input[type=submit] {
   background-color: #d77155;
   padding: 5px;
+  width: 10%;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 5px;
 }
 
 .button:visited {
@@ -478,21 +502,29 @@ input[type=submit]:hover {
 
 .content-contact {
   max-width: 800px;
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   padding: 0px 40px;
 }
 
-.contact-title {
-  text-align: center;
+.contact-form__input{
+  border: #f7f2ee;
+  border-radius: 10px;
+  outline-color: #3d405b;
+  min-width: 40%;
+  margin: 5px;
+  padding: 10px;
+  color: #357b70;
+  font-weight: undefined;
 }
 
 .contact-info {
   line-height: 1.4;
-  text-align: right;
-}
-
-#contact-form {
-  margin-right: 50px;
+  text-align: center;
+  margin: 40px auto 30px auto;
+  padding: 10px 0 10px 0;
+  background-color: rgba(255, 255, 255, 0.626);
+  border-radius: 10px;
+  width: 40%;
 }
 
 /*-----media queries-----*/
