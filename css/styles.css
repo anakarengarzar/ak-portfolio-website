@@ -64,30 +64,10 @@ label {
   line-height: 3;
 }
 
-/*-----button styling-----*/
-button, input[type=submit] {
-  border: none;
-  background-color: #357b70;
-  color: #f7f2ee;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 5px solid rgba(0, 0, 0, 0.1);
-  margin-top: 15px;
-  font-size: 13px;
+.centered-text{
+  text-align: center;
 }
 
-input[type=submit] {
-  background-color: #da6d4b;
-  padding: 5px;
-}
-
-button:hover, button:focus, input[type=submit]:hover {
-  cursor: pointer;
-  opacity: 0.8;
-  font-weight: 700;
-  font-style: italic;
-}
 
 /*-----link styling-----*/
 a {
@@ -100,13 +80,50 @@ a:visited {
   color:  #3d405b;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #357b70;
   text-decoration: underline;
 }
 
 a:active {
   color: #f2cc8f;
+  text-decoration: none;
+}
+
+/*-----button styling-----*/
+.button,
+input[type=submit] {
+  border: none;
+  background-color: #357b70;
+  color: #f7f2ee;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.06);
+  margin-top: 15px;
+  font-size: 13px;
+  font-weight: 300;
+  transition: 0.5s opacity;
+}
+
+input[type=submit] {
+  background-color: #da6d4b;
+  padding: 5px;
+}
+
+.button:visited {
+    color: #f7f2ee;
+}
+
+.button:hover,
+.button:focus,
+input[type=submit]:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  font-weight: 700;
+  font-style: italic;
+  color: #f7f2ee;
   text-decoration: none;
 }
 
@@ -137,19 +154,16 @@ css document it would still disappear... how could i improve this? */
 }
 
 /*-----header navigation list layout & styling-----*/
+.main-navigation{
+  margin-right: 30px;
+}
 .navigaton-list {
  list-style-type: none;
  margin-right: 40px;
+ margin-top: 0;
 }
 
-/*???DOUBT-> i tried using this selector as in the lecture example but it did
-not work, so I made a class for it instead... do you have any idea why it would
-not work???/*
-/*.navigation-list li {
-  display: inline-block;
-  margin-left: 15px;
-}*/
-.navigation-list__li {
+.navigation-list li {
   display: inline-block;
   margin-left: 60px;
 }
@@ -173,6 +187,10 @@ not work???/*
   text-align: center;
 }
 
+.page-footer a{
+  text-decoration: none;
+}
+
 /*-----home page layout-----*/
 .content-profile {
   max-width: 666px;
@@ -186,8 +204,12 @@ not work???/*
   border-radius: 50%;
 }
 
+.intro{
+  margin-bottom: 30px;
+}
+
 /*-----home page styling-----*/
-#home-body__name {
+#home-intro__name {
   font-weight: 700;
   color: #da6d4b;
 }
@@ -195,11 +217,75 @@ not work???/*
 /*-----about page layout-----*/
 .content-about {
   max-width: 800px;
-  margin: 100px auto;
+  margin: 0 auto;
   padding: 0px 40px;
   display: flex;
   flex-direction: column;
 }
+
+.content-about p{
+  max-width: 420px;
+  margin: 10px auto;
+
+}
+
+.about-button {
+  margin: 30px auto;
+}
+
+/* start CSS SVG animation */
+@keyframes sun-color-change {
+  0% {
+    fill: #fdef98;
+  }
+  50% {
+    fill: #FFD577;
+  }
+}
+.sun {
+  animation: 10s sun-color-change infinite alternate linear;
+}
+
+@keyframes cloud1-move {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(200px, 30px);
+  }
+}
+
+.cloud1 {
+  animation: 90s cloud1-move infinite alternate linear;
+}
+
+@keyframes cloud2-move {
+  from {
+    transform: translate(-50px, 0);
+  }
+  to {
+    transform: translate(300px, 0);
+  }
+}
+
+.cloud2 {
+  animation: 60s cloud2-move infinite alternate linear;
+}
+
+@keyframes cloud3-move {
+  from {
+    transform: translate( 0, 0);
+  }
+  to {
+    transform: translate(80px, 20px);
+  }
+}
+
+.cloud3 {
+  animation: 30s cloud3-move infinite alternate linear;
+}
+
+/* end CSS SVG animation */
 
 /*-----projects page layout-----*/
 
@@ -207,10 +293,6 @@ not work???/*
   max-width: 1000px;
   margin: 50px auto;
   padding: 0px 40px;
-}
-
-.projects-title {
-  text-align: center;
 }
 
 /* start grid fallback */
@@ -270,4 +352,19 @@ not work???/*
 
 #contact-form {
   margin-right: 50px;
+}
+
+/*-----media queries-----*/
+@media all and (max-width: 625px){
+
+    .project-grid {
+      max-width: 450px;
+      grid-template-columns: 1fr;
+      min-height: 600px;
+      grid-gap: 10px;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
 }
