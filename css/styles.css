@@ -20,6 +20,10 @@ FONTS
   --weight-bold: 700;
 }
 
+::placeholder{
+  opacity: 50%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -109,6 +113,10 @@ input[type=submit] {
 input[type=submit] {
   background-color: var(--salmon);
   padding: 5px;
+  width: 10%;
+  font-weight: var(--weight-semibold);
+  font-size: 15px;
+  margin-top: 5px;
 }
 
 .button:visited {
@@ -343,21 +351,29 @@ input[type=submit]:hover {
 
 .content-contact {
   max-width: 800px;
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
   padding: 0px 40px;
 }
 
-.contact-title {
-  text-align: center;
+.contact-form__input{
+  border: #f7f2ee;
+  border-radius: 10px;
+  outline-color: var(--dark-blue);
+  min-width: 40%;
+  margin: 5px;
+  padding: 10px;
+  color: var(--green);
+  font-weight: var(--regular);
 }
 
 .contact-info {
   line-height: 1.4;
-  text-align: right;
-}
-
-#contact-form {
-  margin-right: 50px;
+  text-align: center;
+  margin: 40px auto 30px auto;
+  padding: 10px 0 10px 0;
+  background-color: rgba(255, 255, 255, 0.626);
+  border-radius: 10px;
+  width: 40%;
 }
 
 /*-----media queries-----*/

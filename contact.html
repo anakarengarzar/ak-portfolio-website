@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/apt0gwc.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!--<link rel="stylesheet" type="text/css" href="css/styles.css">-->
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
 </head>
 <body>
   <div class="all-but-footer">
@@ -35,22 +35,20 @@
       </nav>
     </header>
     <main class="content-contact">
-      <h1 class="contact-title animate__animated animate__fadeInDown">contact</h1>
-      <form method="post" id="contact-form" class="animate__animated animate__fadeInLeft">
-        <label class="standard-label" for="contact-email">e-mail: </label>
-        <input type="email" id="contact-email" required><br>
-        <label class="standard-label" for="contact-telephone">telephone: </label>
-        <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required><br>
-        <label class="standard-label" for="contact-message">message: </label>
-        <textarea id="contact-message" maxlength="240" required></textarea><br>
+      <h1 class="centered-text animate__animated animate__fadeInDown">contact</h1>
+      <form method="post" id="contact-form" class="centered-text animate__animated animate__fadeInLeft">
+        <!--<label class="standard-label" for="contact-email">e-mail: </label>-->
+        <input type="email" id="contact-email" placeholder="your e-mail" class="contact-form__input" required><br>
+        <!--<label class="standard-label" for="contact-telephone">telephone: </label>-->
+        <input type="tel" id="contact-telephone" placeholder="your phone number" class="contact-form__input" required><br>
+        <!--<label class="standard-label" for="contact-message">message: </label>-->
+        <textarea id="contact-message" maxlength="240" placeholder="and here goes your message..." class="contact-form__input" required></textarea><br>
         <input type="submit" value="send">
       </form>
       <p class="contact-info animate__animated animate__fadeInRight">
-        ana karen garza<br>
-        monterrey, mexico<br>
+        <a href="https://www.google.com">contact me</a><br>
         telephone: <a href="tel:+528181818181" aria-label="Telephone number">+528181818181</a><br>
-        email: <a href="mailto:anakarengarzar@gmail.com" target="_blank">anakarengarzar@gmail.com</a><br>
-        <a href="https://www.google.com">contact me</a>
+        email: <a href="mailto:anakarengarzar@gmail.com" target="_blank">anakarengarzar@gmail.com</a>
       </p>
     </main>
   </div>
