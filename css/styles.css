@@ -1,14 +1,24 @@
 /*
-COLORS
-  off-white: #f7f2ee
-  salmon: #da6d4b -- #d77155
-  yellow: #b18500
-  green: #357b70
-  dark blue: #3d405b
 FONTS
   font-family: 'Roboto', sans-serif; 0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900
   font-family: myriad-pro, sans-serif; 0,400;0,700;1,400;1,700
 */
+
+/*-VARIABLES-*/
+:root {
+  /*--COLORS--*/
+  --off-white: #f7f2ee;
+  --salmon: #d77155; /* second option: #da6d4b */
+  --yellow: #f2cc8f; /* second option: #b18500 */
+  --green: #357b70;
+  --dark-blue: #3d405b;
+
+  /*--FONT STYLING--*/
+  --weight-light: 300;
+  --weight-reg: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+}
 
 * {
   box-sizing: border-box;
@@ -17,10 +27,11 @@ FONTS
 body {
   /*body style setup*/
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  color: #3d405b;
-  background-color: #f7f2ee;
-  /*background-color: lightgrey; /*color to review layout with contrast*/
+  font-weight: var(--weight-light);
+  color: var(--dark-blue);
+  background-color: var(--off-white);
+  /*color to review layout with contrast--/
+  background-color: lightgrey; */
 
   /*setup code for footer at bottom*/
   min-height: 100vh; /*makes body take up the full screen*/
@@ -28,18 +39,6 @@ body {
   flex-direction: column;
 }
 
-/*-----colors to review layout with contrast-----*/
-/*
-header {
-  background-color: #f7f2ee;
-}
-main {
-  background-color: #f7f2ee;
-}
-footer {
-  background-color: #f7f2ee;
-}
-*/
 
 /*-----general styling-----*/
 h1, h2 {
@@ -47,20 +46,20 @@ h1, h2 {
 }
 
 h1 {
-  font-weight: 700;
+  font-weight: var(--weight-bold);
   font-size: 70px;
   margin: 30px auto;
   line-height: 0.8;
 }
 
 h2 {
-  font-weight: 400;
+  font-weight: var(--weight-reg);
   font-size: 25px;
   margin: 0px;
 }
 
 label {
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
   line-height: 3;
 }
 
@@ -71,23 +70,23 @@ label {
 
 /*-----link styling-----*/
 a {
-  font-weight: 700;
-  color: #357b70;
+  font-weight: var(--weight-bold);
+  color: var(--green);
   text-decoration: none;
 }
 
 a:visited {
-  color:  #3d405b;
+  color:  var(--dark-blue);
 }
 
 a:hover,
 a:focus {
-  color: #357b70;
+  color: var(--green);
   text-decoration: underline;
 }
 
 a:active {
-  color: #f2cc8f;
+  color: var(--yellow);
   text-decoration: none;
 }
 
@@ -95,25 +94,25 @@ a:active {
 .button,
 input[type=submit] {
   border: none;
-  background-color: #357b70;
-  color: #f7f2ee;
+  background-color: var(--green);
+  color: var(--off-white);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 5px solid rgba(0, 0, 0, 0.06);
   margin-top: 15px;
   font-size: 13px;
-  font-weight: 300;
+  font-weight: var(--weight-light);
   transition: 0.5s opacity;
 }
 
 input[type=submit] {
-  background-color: #da6d4b;
+  background-color: var(--salmon);
   padding: 5px;
 }
 
 .button:visited {
-    color: #f7f2ee;
+    color: var(--off-white);
 }
 
 .button:hover,
@@ -121,9 +120,9 @@ input[type=submit] {
 input[type=submit]:hover {
   cursor: pointer;
   opacity: 0.8;
-  font-weight: 700;
+  font-weight: var(--weight-bold);
   font-style: italic;
-  color: #f7f2ee;
+  color: var(--off-white);
   text-decoration: none;
 }
 
@@ -143,11 +142,6 @@ input[type=submit]:hover {
   text-align: right;
 }
 
-/*???DOUBT-> i think the reason why the logo does not change size
-when i shrink the viewport is because i have it as an id selector
-however, i tried using a class selector (.page-header__item:first-child)
-but the logo would disappear even playing around with the order in the
-css document it would still disappear... how could i improve this? */
 #header-logo {
   height: 53px;
   width: auto;
@@ -169,8 +163,8 @@ css document it would still disappear... how could i improve this? */
 }
 
 .navigation-list__item--active, .navigation-list__item--active:hover, .navigation-list__item--active:visited {
- background: #3d405b;
- color: #f7f2ee;
+ background: var(--dark-blue);
+ color: var(--off-white);
  text-decoration: none;
 }
 
@@ -210,8 +204,8 @@ css document it would still disappear... how could i improve this? */
 
 /*-----home page styling-----*/
 #home-intro__name {
-  font-weight: 700;
-  color: #da6d4b;
+  font-weight: var(--weight-bold);
+  color: var(--salmon);
 }
 
 /*-----about page layout-----*/
@@ -256,7 +250,7 @@ css document it would still disappear... how could i improve this? */
 }
 
 .cloud1 {
-  animation: 90s cloud1-move infinite alternate linear;
+  animation: 60s cloud1-move infinite alternate linear;
 }
 
 @keyframes cloud2-move {
@@ -269,7 +263,7 @@ css document it would still disappear... how could i improve this? */
 }
 
 .cloud2 {
-  animation: 60s cloud2-move infinite alternate linear;
+  animation: 40s cloud2-move infinite alternate linear;
 }
 
 @keyframes cloud3-move {
@@ -282,9 +276,21 @@ css document it would still disappear... how could i improve this? */
 }
 
 .cloud3 {
-  animation: 30s cloud3-move infinite alternate linear;
+  animation: 15s cloud3-move infinite alternate linear;
 }
 
+@keyframes flag-wiggle {
+   0% { transform: translate( 0, 0); }
+   25% { transform: translate( 0, -5px); }
+   50% { transform: translate( 0, 0); }
+   75% { transform: translate( 0, -8px); }
+  100% { transform: translate( 0, 0); }
+}
+
+.ukrainianflag:hover,
+.mexicanflag:hover{
+  animation: 2s flag-wiggle 1 alternate ease-in-out;
+}
 /* end CSS SVG animation */
 
 /*-----projects page layout-----*/
@@ -325,12 +331,12 @@ css document it would still disappear... how could i improve this? */
 
   .project-grid__item {
     padding: 20px;
-    background-color: #3d405b;
-    color: #f7f2ee;
+    background-color: var(--dark-blue);
+    color: var(--off-white);
   }
 
   .project-grid__item:hover {
-    background-color: #d77155;
+    background-color: var(--salmon);
   }
 
 /*-----contact page layout-----*/
