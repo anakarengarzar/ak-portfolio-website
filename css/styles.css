@@ -110,15 +110,6 @@ input[type=submit] {
   transition: 0.5s opacity;
 }
 
-input[type=submit] {
-  background-color: var(--salmon);
-  padding: 5px;
-  width: 10%;
-  font-weight: var(--weight-semibold);
-  font-size: 15px;
-  margin-top: 5px;
-}
-
 .button:visited {
     color: var(--off-white);
 }
@@ -206,7 +197,7 @@ input[type=submit]:hover {
   border-radius: 50%;
 }
 
-.intro{
+.intro-text{
   margin-bottom: 30px;
 }
 
@@ -355,15 +346,29 @@ input[type=submit]:hover {
   padding: 0px 40px;
 }
 
+#contact-form {
+  width: 60%;
+  margin:auto;
+}
+
 .contact-form__input{
   border: #f7f2ee;
   border-radius: 10px;
   outline-color: var(--dark-blue);
-  min-width: 40%;
+  width: 100%;
   margin: 5px;
   padding: 10px;
   color: var(--green);
   font-weight: var(--regular);
+}
+
+input[type=submit] {
+  background-color: var(--salmon);
+  padding: 5px;
+  width: 30%;
+  font-weight: var(--weight-semibold);
+  font-size: 15px;
+  margin-top: 5px;
 }
 
 .contact-info {
@@ -373,20 +378,56 @@ input[type=submit]:hover {
   padding: 10px 0 10px 0;
   background-color: rgba(255, 255, 255, 0.626);
   border-radius: 10px;
-  width: 40%;
+  width: 60%;
 }
 
 /*-----media queries-----*/
 @media all and (max-width: 625px){
+  
+  /*---general---*/
+    
+  h1 {
+    font-size: 60px;
+  }
 
-    .project-grid {
-      max-width: 450px;
-      grid-template-columns: 1fr;
-      min-height: 600px;
-      grid-gap: 10px;
-    }
+  /*---index page---*/
 
-    h1 {
-      font-size: 60px;
-    }
+  .content-profile {
+    max-width: 90%;
+    margin: 35px auto 20px;
+    text-align: center;
+  }
+  
+  .content-profile__picture {
+    float: none; 
+    width: 220px;
+    margin: 0;
+  }
+
+  .intro-title {
+    margin: 20px auto;
+  }
+  
+  .intro-text{
+    margin: 20px auto 30px auto;
+  }
+  
+  /*---project page---*/
+
+  .project-grid {
+    max-width: 450px;
+    grid-template-columns: 1fr;
+    min-height: 600px;
+    grid-gap: 10px;
+  }
+
+  /*---contact page---*/
+  
+  #contact-form {
+    width: 95%;
+  }
+
+  .contact-info {
+    width: 95%;
+  }
 }
