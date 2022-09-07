@@ -219,7 +219,7 @@ input[type=submit]:hover {
 
  .content-about p{
   max-width: 420px;
-  margin: auto;
+  margin: 0 auto 50px auto;
 }
 
  #about-svg {
