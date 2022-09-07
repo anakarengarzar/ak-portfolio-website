@@ -224,8 +224,6 @@ input[type=submit]:hover {
 
  #about-svg {
   margin-top: 100px;
-  min-width: max-content;
-  max-width: 800px;
  }
  /* end flexbox fallback */
 
