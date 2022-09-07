@@ -208,23 +208,34 @@ input[type=submit]:hover {
 }
 
 /*-----about page layout-----*/
+
+/* start flexbox fallback */
 .content-about {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0px 40px;
-  display: flex;
-  flex-direction: column;
-}
+  display:block;
+  text-align: center;
+  width: 50%;
+ }
+ /* end flexbox fallback */
 
-.content-about p{
-  max-width: 420px;
-  margin: 10px auto;
-
-}
-
-.about-button {
-  margin: 30px auto;
-}
+ @supports (display: flex) {
+  .content-about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-about p{
+    max-width: 420px;
+    margin: 10px auto;
+  
+  }
+  
+  .about-button {
+    margin: 30px auto;
+  }
+ }
 
 /* start CSS SVG animation */
 @keyframes sun-color-change {
@@ -303,7 +314,7 @@ input[type=submit]:hover {
 /* start grid fallback */
 .project-grid__item {
  display: inline-block;
- width: 33%;
+ width: 50%;
 }
 /* end grid fallback */
 
