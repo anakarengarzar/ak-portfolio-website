@@ -216,10 +216,6 @@ input[type=submit]:hover {
   max-width: 800px;
   margin: auto;
  }
-
- .about-button {
-    margin: 30px auto 100px auto;
-  }
  /* end flexbox fallback */
 
  @supports (display: flex) {
