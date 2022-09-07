@@ -465,7 +465,7 @@ input[type=submit]:hover {
 /* start grid fallback */
 .project-grid__item {
  display: inline-block;
- width: 50%;
+ width: 49%;
 }
 /* end grid fallback */
 
