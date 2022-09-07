@@ -11,13 +11,6 @@ FONTS
   font-family: myriad-pro, sans-serif; 0,400;0,700;1,400;1,700
 */
 
-/*-VARIABLES-*/
-:root {
-  /*--COLORS--*/ /* second option: #da6d4b */ /* second option: #b18500 */
-
-  /*--FONT STYLING--*/
-}
-
 ::-webkit-input-placeholder{
   opacity: 50%;
 }
