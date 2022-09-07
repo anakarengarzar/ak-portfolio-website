@@ -298,9 +298,13 @@ input[type=submit]:hover {
   margin: auto;
  }
 
+ .content-about p{
+  max-width: 420px;
+}
+
  #about-svg {
   margin-top: 100px;
-  width: max-content;
+  max-width: 800px;
  }
 
  /* end flexbox fallback */
